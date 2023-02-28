@@ -11,6 +11,38 @@ body {
   font-family: "Solitreo", cursive;
 }
 
+.fadeOut{
+  animation: 0.4s 1 normal fadeOut;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  0%{
+    opacity: 1;
+    display: inherit;
+  }
+  100%{
+    opacity: 0;
+    display: none;
+  }
+}
+
+.fadeIn{
+  animation: 0.4s 1 normal fadeIn;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+    display: inherit;
+  }
+  100%{
+    opacity: 1;
+    display: none;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
