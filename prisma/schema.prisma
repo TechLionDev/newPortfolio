@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "cockroachdb"
+  url      = env("DATABASE_URL")
+}
+
+model User{
+  id    String       @id @default(uuid())
+  email    String       @unique
+  profileUrl String @default("https://cdn0.iconfinder.com/data/icons/education-2-27/32/user_staff_person_man_profile_boss_circle-512.png")
+  password String
+  roles    String[]
+  name     String
+  orders Order[] 
+}
+
+model Order{
+  id String @id @default(uuid())
+  due DateTime
+  type String
+  details String
+  customer User @relation(fields: [customerId], references: [id])
+  customerId String
+}
