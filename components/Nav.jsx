@@ -71,7 +71,7 @@ const Nav = ({ user, loggedIn }) => {
             <div className="p-4 mx-2 -mt-4 z-[60] bg-blue-100 rounded-lg shadow-lg w-fit">
               <NavLink text={"Home"} url={"/"} />
               <NavLink text={"About Us"} url={"/about"} />
-              <NavLink text={"Apply"} url={"/register?ref=apply"} />
+              <NavLink text={"Order"} url={"/register?ref=order"} />
             </div>
           </div>
         ) : (
@@ -199,7 +199,7 @@ const Nav = ({ user, loggedIn }) => {
           <div className="p-4 mx-2 -mt-4 z-[60] bg-blue-100 rounded-lg shadow-lg w-fit">
             <NavLink text={"Home"} url={"/"} />
             <NavLink text={"About Us"} url={"/about"} />
-            <NavLink text={"Apply"} url={"/apply"} />
+            <NavLink text={"Order"} url={"/order"} />
           </div>
         </div>
       ) : (
