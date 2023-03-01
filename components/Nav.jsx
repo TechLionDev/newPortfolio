@@ -10,11 +10,9 @@ const Nav = ({ user, loggedIn }) => {
   if (!loggedIn) {
     return (
       <>
-        <p className="fixed">{scrollPosition}</p>
         <nav
           className={
-            "sticky top-0 z-50 flex items-center justify-between p-2 px-6 py-4 bg-blue-100 rounded-b-lg shadow-lg " +
-            (scrollPosition >= 100 ? "fadeOut" : scrollPosition <= 100 ? "fadeIn" : "")
+            "sticky top-0 z-50 flex items-center justify-between p-2 px-6 py-4 bg-blue-100 rounded-b-lg shadow-lg "
           }
         >
           <div className="menu">

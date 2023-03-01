@@ -22,7 +22,7 @@ const Home = ({ users }) => {
       <CHead title={"Home"} />
       <Nav loggedIn={getCookie("loggedIn")} user={curr} />
       <div className="h-screen p-4 m-2">
-        
+        <h1 className="text-3xl font-black text-center handwritten"> WELCOME </h1>
       </div>
     </>
   );
